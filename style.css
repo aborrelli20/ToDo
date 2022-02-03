@@ -1,0 +1,19 @@
+.delete {
+  margin-right: 10px;
+}
+
+input[type=checkbox] {
+  transform: scale(1.2);
+  background-color: black;
+}
+
+.button {
+  background-color: black;
+  color: aliceblue;
+  border-radius: 10%;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
