@@ -5,6 +5,7 @@ $(document).ready(function () {
       url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks?api_key=230',
       dataType: 'json',
       success: function (response, textStatus) {
+        $('#todo-list').empty();
         response.tasks.forEach(function (task) {
           $('#todo-list').append('<p>' + task.content + '</p>');
         })
