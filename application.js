@@ -5,7 +5,7 @@ $(document).ready(function () {
     dataType: 'json',
     success: function (response, textStatus) {
       response.tasks.forEach(function (task) {
-        console.log(task.content);
+        $('#todo-list').append('<p>' + task.content + '</p>');
       })
     },
     error: function (request, textStatus, errorMessage) {
