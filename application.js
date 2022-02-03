@@ -28,6 +28,7 @@ $(document).ready(function () {
         }
       }),
       success: function (response, textStatus) {
+        $('#new-task-content').val('');
         getAndDisplayAllTasks();
       },
       error: function (request, textStatus, errorMessage) {
@@ -43,4 +44,14 @@ $(document).ready(function () {
 
   getAndDisplayAllTasks();
 
+  $.ajax({
+    type: 'DELETE',
+    url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/5729?api_key=230',
+    success: function (response, textStatus) {
+      console.log(response);
+    },
+    error: function (request, textStatus, errorMessage) {
+      console.log(errorMessage);
+    }
+  });
 });
